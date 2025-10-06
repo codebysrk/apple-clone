@@ -2,9 +2,9 @@ const swiper = new Swiper('.swiper', {
   // Default (Desktop) settings
   direction: 'horizontal',
   loop: true,
-  slidesPerView: 1.5, // Show 3 slides on desktop
+  slidesPerView: 1, // Base slidesPerView
   spaceBetween: 30,
-  centeredSlides: true,
+  centeredSlides: true, // Slides ko center mein rakhein
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
@@ -16,15 +16,20 @@ const swiper = new Swiper('.swiper', {
 
   // Responsive breakpoints
   breakpoints: {
-    // when window width is <= 768px (Tablet)
-    768: {
-      slidesPerView: 2, // Show 2 slides on tablets
-      spaceBetween: 20
+    // Mobile: 1.2 slides, thodi peek dikhegi
+    320: {
+      slidesPerView: 1.2,
+      spaceBetween: 10,
     },
-    // when window width is <= 480px (Mobile)
-    480: {
-      slidesPerView: 1.2, // Show 1 and a bit of the next on mobile
-      spaceBetween: 10
-    }
-  }
+    // Tablet: 2 slides, zyada chaudi
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    // Desktop: 2.5 slides, har slide kafi chaudi dikhegi
+    1024: {
+      slidesPerView: 1.2, // Yahan badlav kiya gaya hai
+      spaceBetween: 30,
+    },
+  },
 });

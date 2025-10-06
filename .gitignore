@@ -1,0 +1,7 @@
+(# Ignore minified files so they are not pushed)
+*.min.js
+*.min.css
+*.min.*
+
+# If you want to also ignore source maps for minified files (optional)
+# *.min.js.map
